@@ -23,6 +23,9 @@ pub fn move(
   turn: Player,
   failed_moves: List(String),
 ) -> Result(String, String) {
+  // ignore useless information
+  let _ = #(turn, failed_moves)
+
   // parse FEN String into Bitboards position
   let position = board.parse_from(fen)
 

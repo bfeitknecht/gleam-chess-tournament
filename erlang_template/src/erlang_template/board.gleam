@@ -41,7 +41,7 @@ pub fn parse_from(fen: String) -> Position {
   let fields = string.split(fen, " ")
   let ranks = result.unwrap(list.first(fields), "")
   let _bitboards = string.concat(string.split(ranks, "/"))
-
+  // filter into bitboards
   todo
 }
 
@@ -49,6 +49,6 @@ pub type Move {
   Move(from: Bitboard, to: Bitboard, promotion: Option(Bitboard))
 }
 
-pub fn legal_next(from: Position) {
+pub fn legal_next(from: Position) -> List(Move) {
   todo
 }
