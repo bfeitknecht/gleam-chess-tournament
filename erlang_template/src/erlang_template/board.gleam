@@ -29,20 +29,24 @@ pub type Position {
   )
 }
 
+fn empty_position() -> Position {
+  Position(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+
 // FEN: six fields seperated by spaces
 // rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 // pieces: eight ranks seperated by slashes, white capital
 // player: w/b
 // castling: KQkq
 // en passant: target or -
-// halfmove
+// halfmoves since last pawn move or capture
 // fullmove
 pub fn parse_from(fen: String) -> Position {
   let fields = string.split(fen, " ")
   let ranks = result.unwrap(list.first(fields), "")
   let _bitboards = string.concat(string.split(ranks, "/"))
   // filter into bitboards
-  todo
+  empty_position()
 }
 
 pub type Move {
@@ -50,5 +54,7 @@ pub type Move {
 }
 
 pub fn legal_next(from: Position) -> List(Move) {
-  todo
+  case from {
+    _ -> []
+  }
 }

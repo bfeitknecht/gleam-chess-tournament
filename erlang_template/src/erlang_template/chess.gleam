@@ -39,6 +39,6 @@ pub fn move(
   Ok("e2e4")
 }
 
-fn search_moves(moves: List(board.Move), depth: Int) {
+fn search_moves(moves: List(board.Move), depth: Int) -> Nil {
   todo
 }
